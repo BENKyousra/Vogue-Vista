@@ -1,0 +1,405 @@
+
+html::-webkit-scrollbar { 
+    width: 10px; 
+}
+
+html::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255); 
+}
+
+html::-webkit-scrollbar-thumb {
+    background-color: rgb(0, 0, 0); 
+    border-radius: 20px;
+}
+
+body {
+    background-image:url('bg.jpg') ;
+    background-attachment: fixed;
+    font-family: 'elephant',sans-serif;
+    font-style: italic;
+}
+.navbar {
+    background-color: rgba(255, 255, 255, 0.5); /* Couleur de fond */
+    color: rgb(0, 0, 0);
+    position: fixed;
+    width: 100%;
+    top: 0; 
+    left: 0;
+    z-index: 1000;
+}
+.menubt {
+    width: 40px;
+    height: 40px; 
+    margin-left: 10px;
+    position:fixed;
+    cursor: pointer;
+    z-index: 9999;
+}
+.side-menu {
+    position: fixed;
+    top: 58px;
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: left 0.3s ease;
+    z-index: 10;
+}
+
+.side-menu ul {
+    margin-top: 10px;
+    padding: 0;
+    list-style: none;
+}
+
+.side-menu ul li {
+    padding: 15px;
+}
+
+.side-menu ul li a {
+    text-decoration: none;
+    color: #000000;
+    font-size: 17px;
+}
+.side-menu.activ {
+    left: 0;
+}
+
+.side-menu {
+    transition: left 0.3s ease;
+}
+li:hover {
+    background-color:#cd9affb0;
+}
+li:active {
+    background-color:#cd9affb0;
+}
+h1 {
+    font-family: 'Harlow Solid';
+    font-size: xx-large;
+    margin-left: 350px;
+}
+.search {
+    position: relative;
+    width: 300px;
+    margin: 20px;
+}
+#searchInput {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'courier new';
+    margin-left: 300px;
+    width: 100%;
+    padding: 10px;
+    padding-left: 30px; /* Espace pour l'icône à droite */
+    box-sizing: border-box; /* Inclut padding dans la largeur */
+    border: 2px solid #575757;
+    border-radius: 4px;
+}
+
+.fa-search {
+    position: absolute;
+    right: -10px;
+    top: 8px; /* Ajuster selon la hauteur de votre input */
+    color: #575757;
+    pointer-events: none; /* L'icône ne doit pas interférer avec l'input */
+}
+.search button {
+    position: absolute;
+    right: -15px;
+    top: 5px;
+    border: none;
+    background: none;
+    color: #ffffff;
+    padding: 30px;
+    padding-left: 5px;
+    border-radius: 0 4px 4px 0; /* Arrondir seulement les coins droits */
+    cursor: pointer;
+}
+.align {
+    display: flex;
+    align-items: center;
+    height: 55px;
+}
+.gallery-container
+ {
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    position: relative;
+    width:  100%;
+    height:500px;
+    overflow: hidden;
+
+}
+
+.gallery {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width:100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.image {
+    max-width: 100%;
+    max-height: 100%;
+    display: none;
+}
+
+.active {
+    display: block;
+    position: relative; /* Position relative pour éventuellement ajuster le z-index */
+    z-index: 1;
+    border:3px solid #ffffff80;
+}
+
+.navigation-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+ /* Position relative pour éventuellement ajuster le z-index */
+    z-index: 10;
+}
+
+.dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #bbb;
+    margin: 0 5px;
+    cursor: pointer;
+    position: relative; /* Position relative pour éventuellement ajuster le z-index */
+    z-index: 10;
+}
+
+.dot.active {
+    background-color: rgb(197, 139, 255);
+    position: relative; /* Position relative pour éventuellement ajuster le z-index */
+    z-index: 10;
+}
+
+.prev-image, .next-image {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
+    height: 500px;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    background-size: cover;
+    background-position: center;
+}
+
+.prev-image {
+    left: 0px;
+}
+
+.next-image {
+    right: 0px;
+}
+
+.prev-image:hover, .next-image:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+.new {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 5px;
+    height: 40px;
+}
+h2 {
+    margin-left: 30px;
+}
+.ico {
+    margin-left: 10px;
+    width: 30px;
+    height: 30px;
+}
+.articles {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.img1 {
+    text-align: center;
+    width: 100%; /* Assure que l'image couvre la largeur du cadre */
+    position: absolute;
+    top: -120px;
+}
+.img2 {
+    text-align: center;
+    width: 100%; /* Assure que l'image couvre la largeur du cadre */
+    position: absolute;
+    top: -30%;
+}
+.img3 {
+    text-align: center;
+    width: 100%; /* Assure que l'image couvre la largeur du cadre */
+    position: absolute;
+    top: -120px;
+}.img4 {
+    text-align: center;
+    width: 100%; /* Assure que l'image couvre la largeur du cadre */
+    position: absolute;
+    top: -155px;
+}
+.article {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 5px;
+    margin-top:5px ;
+    width: 250px;
+    height: auto;
+}
+.description {
+    margin-top: 10px;
+    color: #575757;
+}
+.prix {
+    text-align: right;
+}
+h4 {
+    margin-top: 10px;
+}
+a {
+    color: inherit; 
+    text-decoration: none;
+}
+footer {
+    background-color:rgba(255, 255, 255, 0.5);
+    color: #575757;
+    height: 20px;
+    width:100%;
+    margin-top: 10px;
+}
+p {
+    margin:5px;
+    text-align: center;
+}
+.cadre {
+    width: 250px;
+    height: 200px;
+    overflow: hidden;
+    display: block;
+    position: relative;
+}
+.contact {
+    background-color:rgba(0, 0, 0);
+    color: #ffffff;
+    margin-top: 20px;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Ajoute un espace entre les colonnes */
+
+}
+form {
+    background-color:#ffffff; /* Couleur de fond du formulaire */
+    padding: 20px; /* Espacement intérieur */
+    border-radius: 8px; /* Bords arrondis */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Ombre portée */
+    width: 500px; /* Largeur maximale du formulaire */
+    line-height: 5px;
+    color:#000000;
+}
+
+label {
+    display: block; /* Les étiquettes s'affichent comme des blocs */
+    margin-bottom: 10px; /* Espacement sous chaque étiquette */
+    font-weight:lighter; /* Texte en gras */
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%; /* Largeur complète pour remplir l'espace conteneur */
+    padding: 8px; /* Espacement intérieur pour le confort de frappe */
+    margin-bottom: 10px; /* Espacement sous chaque champ */
+    border: 1px solid #ccc; /* Bordure légère */
+    border-radius: 4px; /* Bords légèrement arrondis */
+    margin-left:-10px;
+}
+
+button {
+    background-color:#cd9aff; /* Couleur de fond du bouton */
+    color: rgb(0, 0, 0); /* Couleur du texte */
+    padding: 10px 20px; /* Espacement intérieur du bouton */
+    border: none; /* Aucune bordure */
+    border-radius: 5px; /* Bords arrondis du bouton */
+    cursor: pointer; /* Forme du curseur en pointeur */
+    font-family: 'elephant';
+    font-style: italic;
+}
+
+button:hover {
+    background-color:#000000; /* Changement de couleur au survol */
+    color: #cd9aff;
+}
+
+/* Styles pour les liens des réseaux sociaux */
+ul {
+    list-style-type: none; /* Suppression des puces */
+    padding: 0; /* Suppression de l'espacement intérieur */
+}
+
+ul li {
+    margin-right: 10px; /* Espacement entre les liens */
+}
+.li:hover {
+    background-color: #cd9aff;
+}
+
+ul li a {
+    text-decoration: none; /* Suppression du soulignement */
+    color: #ffffff; /* Couleur des liens */
+}
+
+ul li a:hover {
+    text-decoration:none;
+}
+
+/* Style pour la carte Google Maps */
+iframe {
+    width: 100%; /* Largeur complète */
+    border: none; /* Suppression de la bordure */
+    margin: 50px; /* Espacement au-dessus de la carte */
+}
+
+/* Responsive design pour petits écrans */
+@media (max-width: 600px) {
+    body {
+        padding: 10px; /* Réduction de l'espacement pour les petits écrans */
+    }
+}
+.t {
+    flex: 1; /* Permet à ce conteneur de prendre autant d'espace que possible, mais moins que la carte */
+    display: flex;
+    flex-direction: column;
+}
+h3 {
+    font-size: larger;
+    font-weight: lighter;
+}
+.img5{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+.img6{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}.img7{
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
